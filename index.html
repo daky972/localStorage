@@ -1,0 +1,32 @@
+<html>
+
+<style></style>
+
+<body>
+
+<input id="getByKey" type="text" placeholder='enter key'/>
+<input type="button" value="Get by key" onclick="getByKey(event)"/>
+
+
+  <script>
+  
+    function getByKey(event) {
+      var button = document.getElementById('getByKey')
+      var key = button.value.trim()
+      
+      if (key == '') {
+        return;
+      }
+      
+      window.alter(localStorage.getItem(key));  
+    }
+    
+    function getAllKeys() {
+      var keys = Object.keys(localStorage)
+      window.alter(keys)
+    }
+  
+  </script>
+/<body>
+
+</html>
